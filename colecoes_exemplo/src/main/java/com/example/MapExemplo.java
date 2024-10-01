@@ -10,11 +10,13 @@ public class MapExemplo {
         nomeIdade = new HashMap<>();
     }
 
-    public void adicionarNomeIdade(){
-        nomeIdade.put("Maria", 23);
+    public void adicionarNomeIdade(String nome, int idade){
+        nomeIdade.put();
     }
 
     public void listarNomesIdade(){
-        
+        for (String  nome : nomeIdade.keySet()) {
+            System.out.println(nome + " " +idade);            
+        }
     }
 }
