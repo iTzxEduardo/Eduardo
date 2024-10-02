@@ -21,8 +21,14 @@ public class LeituraAPI {
             BufferedReader br = new BufferedReader(new InputStreamReader(con.getInputStream()));
 
             //laço de repetição
+            String linha;
+            while ((linha = br.readLine()) != null) {
+                conteudo.append(linha);
+            }
+            br.close();
+            System.out.println(conteudo.toString());
         } catch (Exception e) {
-            // TODO: handle exception
+            e.printStackTrace();
         }
        
     }
