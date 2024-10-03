@@ -1,4 +1,4 @@
-nome, email, endereco, idade
-Maria, maria@gmail.com, rua 1, 25
-João, joao@gmail.com, rua 2, 39
-Pedro, pedro@gmail.com, rua a, 42
+nome,quantidade,preco
+Martelo,50,15.75
+Serra,20,35.50
+Chave de Fenda,100,5.25

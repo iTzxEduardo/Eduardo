@@ -1,27 +1,28 @@
 package com.example;
 
-import java.net.URL;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
+import java.net.URL;
 
 public class LeituraAPI {
-    public void exemplo(){
+    public void exemplo() {
         try {
-            URL url = new URL("https://api.github.com/users/iTzxEduardo");
-            HttpURLConnection con =  (HttpURLConnection) url.openConnection();
+            URL url = new URL("https://api.github.com/users/Diogotb");
+            HttpURLConnection con = (HttpURLConnection) url.openConnection();
             con.setRequestMethod("GET");
 
             int status = con.getResponseCode();
-            if (status!=200){
-                throw new Exception("Erro de Conexão");              
+            if (status!=200) {
+                throw new Exception("Erro de Conexão");
             }
-
-            //Conexão estabelecida
-            BufferedReader br = new BufferedReader(new InputStreamReader(con.getInputStream()));
-
+            //conexão estabelecidada
+            BufferedReader br = new BufferedReader(
+                new InputStreamReader(con.getInputStream())
+            );
             //laço de repetição
             String linha;
+            StringBuffer conteudo = new StringBuffer();
             while ((linha = br.readLine()) != null) {
                 conteudo.append(linha);
             }
@@ -30,6 +31,6 @@ public class LeituraAPI {
         } catch (Exception e) {
             e.printStackTrace();
         }
-       
+        
     }
 }
